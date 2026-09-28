@@ -1,14 +1,20 @@
-# PageRank Estimation
+# PageRank Estimation Engine
 
 ## Projection Description
 
-Within this coursework, I have implemented 2 different methods for estimating pagerank for certain websites
+A Python-based graph processing tool based to implement and evaluate two fundamental PageRank estimation algorithms on directed web graphs:  **Monte Carlo Stochastic Random Walks** and **Iterative Probability Distribution
 
-1. Stochastic PageRank - An algorithm that calculates pagerank based on how many visits a page receives during
-random walks
+---
 
-2. Distribution-Based PageRank - Uses probability to calculate the probability of being on each page
+## Algorithms Implemented 
 
+### 1. Stochastic PageRank 
+* Models a random traverse of a directed graph with a standard damping factor.
+* Approximates stationary distribution via tracking the frequency of visits over a large sample of continous random walks.
+ 
+### 2. Distribution-Based PageRank 
+* Computes exact stationary probability distribution across all graph vertices iteratively using transition probabilities.
+* Updates staste vectors simultaneously until reaches convergence threshold or max iterations are exceeded.
 ## Features
 
 Implements two PageRank estimation algorithms:
@@ -17,6 +23,16 @@ Distribution-Based PageRank using probability updates.
 Command-line interface to select the method and control parameters.
 Displays top-ranked pages and their PageRank values.
 Prints number of nodes and edges about the graph 
+
+## Graph Data Format
+
+Input files should represent directed edge lists formatted as whitespace seperate node pairs:
+
+```text
+source_node_id destination_node_id
+0 1
+0 2
+1 2
 
 ## Commands
 
